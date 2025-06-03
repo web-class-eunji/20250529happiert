@@ -10,7 +10,7 @@
 /* 탑버튼 끝 */
 
 /* 메인섹션시작 */
-.main_section {
+.bg_area {
     background: url(../img/main_section_bg.png);
     background-repeat: no-repeat;
     height: 100vh;
@@ -66,11 +66,26 @@ header > p {
     width: 0;
     height: 2px;
     margin-top: 16px;
+    transition: 0.5s;
 }
 
-.header_menu > li:hover .header_menu > li::after {
+.header_menu > li:hover::after {
     width: 100%;
 }
+
+/* 헤더 script 스타일 시작*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.5s;
+}
+
+header.hide {
+    transform: translateY(100%);
+    opacity: 0;
+}
+/* 헤더 script 스타일 끝*/
 
 .main_text {
     margin: 60px 80px;
@@ -139,3 +154,196 @@ header > p {
 }
 /* 쉐이크리스트섹션끝 */
 
+/* 리서치 섹션 시작 */
+/* 회전하는 텍스트 애니메이션 시작 */
+.research_section {
+    overflow: hidden;
+}
+
+.text_ani_box {
+    width: max-content;
+    animation: roll 70s infinite linear;
+    margin-bottom: 100px;
+}
+
+.text_ani_box > p {
+    font-size: 170px;
+    color: #be201f;
+}
+
+@keyframes roll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);   
+    }
+}
+/* 회전하는 텍스트 애니메이션 끝 */
+.research_box {
+    margin: 0 80px;
+}
+
+.research_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.research_bottom {
+    margin-top: 34px;
+}
+
+.research_list_width {
+    width: 560px;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.research_list_width > h2 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #be201f;
+    margin-bottom: 32px;
+}
+
+.research_list_width > p {
+    color: #be201f;
+    line-height: 24px;
+    margin-bottom: 250px;
+}
+
+.more_btn {
+    color: #be201f;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid #be201f;
+    width: fit-content;
+    padding: 16px 32px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.more_btn:hover {
+    color: #fff;
+    background-color: #be201f;
+}
+/* 리서치 섹션 끝*/
+
+/* 애니메이션존섹션 시작 */
+.animation_zone {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 80px;
+    align-items: center;
+}
+
+.animation_text {
+    font-size: 120px;
+    color: #be201f;
+    line-height: 170px;
+}
+
+.animation_text > span {
+    border: 3px solid #be201f;
+    padding: 0 60px 18px;
+    border-radius: 100px;
+}
+
+.animaiton_img {
+    animation: img_rotate 15s infinite linear;
+}
+
+@keyframes img_rotate {
+    0%{
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* 에니메이션존섹션 끝 */
+
+/* 다이어트섹션 시작 */
+.diet_section {
+    background: url(../img/diet_section_bg.png);
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.diet_section > p {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 80px;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.diet_section > h2 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.more_btn.white {
+    color: #fff;
+    background: none;
+    border: 1px solid #fff;
+}
+
+.more_btn.white:hover {
+    color: #be201f;
+    background: #fff;
+}
+/* 다이어트섹션 끝 */
+
+/* 푸터시작 */
+footer {
+    background-color: #be201f;
+    padding: 100px 80px;
+}
+
+.footer_contant {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    font-size: 20px;
+    line-height: 32px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.footer_contant > div > h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.info > p:nth-child(2) {
+    margin-bottom: 32px;
+}
+
+.guide > ul > li {
+    width: 250px;
+    padding: 12px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.contact > div {
+    padding: 16px 0;
+}
+
+.plus_text {
+    font-size: 26px;
+    font-weight: 600;
+}
+/* 푸터끝 */
