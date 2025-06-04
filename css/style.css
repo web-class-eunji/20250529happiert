@@ -10,10 +10,17 @@
 /* 탑버튼 끝 */
 
 /* 메인섹션시작 */
+
+.main_section {
+    position: relative;
+}
+
 .bg_area {
     background: url(../img/main_section_bg.png);
     background-repeat: no-repeat;
     height: 100vh;
+    position: absolute;
+    width: 100%;
 }
 
 header > p {
@@ -79,6 +86,7 @@ header {
     top: 0;
     width: 100%;
     transition: 0.5s;
+    z-index: 1000;
 }
 
 header.hide {
@@ -88,7 +96,7 @@ header.hide {
 /* 헤더 script 스타일 끝*/
 
 .main_text {
-    margin: 60px 80px;
+    margin: 350px 80px;
 }
 
 .main_text > h2 {
@@ -109,7 +117,7 @@ header.hide {
 
 /* 쉐이크리스트섹션시작 */
 .shack_list_section {
-    padding: 80px;
+    padding: 1000px 80px 80px 80px;
 }
 
 .shack_list {
